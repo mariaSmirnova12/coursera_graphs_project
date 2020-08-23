@@ -9,7 +9,6 @@ repositories {
     jcenter()
     flatDir {
         dirs 'libs'
-        //dirs "$rootProject.projectDir"
     }
 }
 
@@ -21,16 +20,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.13'
     implementation name: 'javax.json-1.0.4'
     compile group: 'com.lynden', name: 'GMapsFX', version: '2.10.0'
-    // compile name: 'libs/javax.json-1.0.4'
 }
-
-/*allprojects {
-    gradle.projectsEvaluated {
-        tasks.withType(JavaCompile) {
-            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
-        }
-    }
-}*/
 
 task tags(type: Test) {
     gradle.projectsEvaluated {
@@ -39,7 +29,4 @@ task tags(type: Test) {
         }
     }
 }
-/*tasks.withType(JavaCompile) {
-    options.compilerArgs << '-Xlint:unchecked'
-    options.deprecation = true
-}*/
+
